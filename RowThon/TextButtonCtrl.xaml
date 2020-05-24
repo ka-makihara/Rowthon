@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="RowThon.TextButtonCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:my="http://schemas.microsoft.com/winfx/2006/xaml/presentation/ribbon"
+             d:DesignHeight="30" d:DesignWidth="202">
+    <Grid>
+        <StackPanel Name="stackPanel1" Orientation="Horizontal">
+            <my:RibbonTextBox Name="ribbonTextBox1" VerticalContentAlignment="Center" IsReadOnly="True" Width="117" />
+            <RepeatButton Name="ribbonButton1" Width="25" Content="+" 
+						  VerticalContentAlignment="Stretch" FontSize="15" 
+						  HorizontalAlignment="Center" VerticalAlignment="Stretch" 
+						  Height="25" 
+						  Click="ribbonButton1_Click">
+                <RepeatButton.BorderBrush>
+                    <SolidColorBrush />
+                </RepeatButton.BorderBrush>
+                <RepeatButton.Background>
+                    <SolidColorBrush />
+                </RepeatButton.Background>
+            </RepeatButton>
+			<RepeatButton Name="ribbonButton2" Width="25" Content="-" VerticalContentAlignment="Stretch" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Stretch" Height="25" Click="ribbonButton2_Click">
+                <RepeatButton.BorderBrush>
+                    <SolidColorBrush />
+                </RepeatButton.BorderBrush>
+                <RepeatButton.Background>
+                    <SolidColorBrush />
+                </RepeatButton.Background>
+            </RepeatButton>
+        </StackPanel>
+    </Grid>
+</UserControl>

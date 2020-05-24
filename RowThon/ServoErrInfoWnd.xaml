@@ -1,0 +1,18 @@
+﻿<Window x:Class="RowThon.ServoErrInfoWnd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ｻｰﾎﾞｴﾗｰ情報" Height="351" Width="533" WindowStartupLocation="Manual" Background="#FFF0F0F0">
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="270*" />
+			<RowDefinition Height="42*" />
+		</Grid.RowDefinitions>
+		<StackPanel Grid.Row="1" Name="stackPanel1" Orientation="Horizontal" HorizontalAlignment="Right">
+			<Button Content="ｴﾗｰｸﾘｱ" Height="23" Name="ErrClrbtn" Width="75" Margin="10,0,0,0" Click="ErrClrbtn_Click" />
+			<Button Content="終了" Height="23" Name="button1" Width="75" Margin="10,0" IsCancel="True" />
+		</StackPanel>
+		<StackPanel Name="stackPanel2">
+			<ListBox Name="infoBox" Height="271" />
+		</StackPanel>
+	</Grid>
+</Window>

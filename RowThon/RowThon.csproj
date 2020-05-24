@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\OpenCvSharp-AnyCPU.2.4.10.20150604\build\OpenCvSharp-AnyCPU.props" Condition="Exists('..\packages\OpenCvSharp-AnyCPU.2.4.10.20150604\build\OpenCvSharp-AnyCPU.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2B247E48-33C3-454F-90B3-F156B7928453}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RowThon</RootNamespace>
+    <AssemblyName>RowThon</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>RowThon.App</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.AvalonEdit, Version=5.0.1.0, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
+      <HintPath>..\packages\AvalonEdit.5.0.2\lib\Net40\ICSharpCode.AvalonEdit.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython, Version=2.7.5.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\IronPython 2.7\IronPython.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamic, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\IronPython 2.7\Microsoft.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL" />
+    <Reference Include="OpenCvSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp-AnyCPU.2.4.10.20150604\lib\net40\OpenCvSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenCvSharp.Blob, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp-AnyCPU.2.4.10.20150604\lib\net40\OpenCvSharp.Blob.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenCvSharp.CPlusPlus, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp-AnyCPU.2.4.10.20150604\lib\net40\OpenCvSharp.CPlusPlus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenCvSharp.Extensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp-AnyCPU.2.4.10.20150604\lib\net40\OpenCvSharp.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenCvSharp.UserInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp-AnyCPU.2.4.10.20150604\lib\net40\OpenCvSharp.UserInterface.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RibbonControlsLibrary" />
+    <Reference Include="Microsoft.Windows.Shell" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="BuiltinFuncs.cs" />
+    <Compile Include="enums.cs" />
+    <Compile Include="IniFileUtils.cs" />
+    <Compile Include="IoModel.cs" />
+    <Compile Include="MessageData.cs" />
+    <Compile Include="ProgramTab.cs" />
+    <Compile Include="PyScript.cs" />
+    <Compile Include="SerializableDictionary.cs" />
+    <Compile Include="ServoBuiltInFuncs.cs" />
+    <Compile Include="ServoErrInfoWnd.xaml.cs">
+      <DependentUpon>ServoErrInfoWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ServoJog.cs" />
+    <Compile Include="ServoModel.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SocketCtrl.cs" />
+    <Compile Include="Trace.cs" />
+    <Compile Include="VersionInfo.xaml.cs">
+      <DependentUpon>VersionInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel.cs" />
+    <Compile Include="ViewModelBase.cs" />
+    <Compile Include="ViewModel\ApplicationMenuItemData.cs" />
+    <Compile Include="ViewModel\ApplicationSplitMenuItemData.cs" />
+    <Compile Include="ViewModel\ButtonData.cs" />
+    <Compile Include="ViewModel\CheckBoxData.cs" />
+    <Compile Include="ViewModel\ComboBoxData.cs" />
+    <Compile Include="ViewModel\ContextualTabGroupData.cs" />
+    <Compile Include="ViewModel\ControlData.cs" />
+    <Compile Include="ViewModel\DelegateCommand.cs" />
+    <Compile Include="ViewModel\GalleryCategoryData.cs" />
+    <Compile Include="ViewModel\GalleryData.cs" />
+    <Compile Include="ViewModel\GalleryItemData.cs" />
+    <Compile Include="ViewModel\GroupData.cs" />
+    <Compile Include="ViewModel\MenuButtonData.cs" />
+    <Compile Include="ViewModel\MenuItemData.cs" />
+    <Compile Include="ViewModel\RadioButtonData.cs" />
+    <Compile Include="ViewModel\SeparatorData.cs" />
+    <Compile Include="ViewModel\SplitButtonData.cs" />
+    <Compile Include="ViewModel\SplitMenuItemData.cs" />
+    <Compile Include="ViewModel\StylesSet.cs" />
+    <Compile Include="ViewModel\TabData.cs" />
+    <Compile Include="ViewModel\TextBoxData.cs" />
+    <Compile Include="ViewModel\ThemeFonts.cs" />
+    <Compile Include="ViewModel\ToggleButtonData.cs" />
+    <Compile Include="ViewModel\TplImageData.cs" />
+    <Compile Include="ViewModel\WordModel.cs" />
+    <Compile Include="ViewModel_Property.cs" />
+    <Compile Include="VisionModel.cs" />
+    <Page Include="EditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GridSplitter1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CloseTabItem.cs" />
+    <Compile Include="Converters.cs" />
+    <Compile Include="EditorControl.xaml.cs">
+      <DependentUpon>EditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="RscDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ServoErrInfoWnd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VersionInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Script\areaData.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <EmbeddedResource Include="Python.xshd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LargeIcon.png" />
+    <Resource Include="Images\SmallIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\saveHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CutHS.png" />
+    <Resource Include="Images\DownArrowL.png" />
+    <Resource Include="Images\Edit_RedoHS.png" />
+    <Resource Include="Images\Edit_UndoHS.png" />
+    <Resource Include="Images\FormRunHS.png" />
+    <Resource Include="Images\SmallGrab.png" />
+    <Resource Include="Images\startVision.png" />
+    <Resource Include="Images\UpArrowL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CameraLib\CameraLib\CameraLib.vcxproj">
+      <Project>{F1DF9135-1684-4870-8A93-52D86F958113}</Project>
+      <Name>CameraLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\cLogLibs\cLogLibs\cLogLibs.vcxproj">
+      <Project>{218DF7A6-57F9-4B0C-A954-FAF87613C570}</Project>
+      <Name>cLogLibs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\eventManager\EventManager\EventManager.vcxproj">
+      <Project>{E1AA2ACA-A102-41A8-AFBE-B8BC6327CBF5}</Project>
+      <Name>EventManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ioModule\ioModule\ioModule.csproj">
+      <Project>{6505710E-40FD-448A-8F6B-9FE90598DE97}</Project>
+      <Name>ioModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\pythonConsole\PythonConsoleControl.csproj">
+      <Project>{F1152D68-346B-4F48-8DB7-BE67B5CB1F49}</Project>
+      <Name>PythonConsoleControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\svModule\svModule\servoManager.csproj">
+      <Project>{E11AF0D4-26DD-4C06-B311-7F3BD83561BE}</Project>
+      <Name>servoManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TraceLibs\TraceLibs\TraceLibs.vcxproj">
+      <Project>{0FC42E85-1AEE-4D8C-82D4-3FC7F858A1EF}</Project>
+      <Name>TraceLibs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\virtualMotion\virtualMotion\virtualMotion.vcxproj">
+      <Project>{AF09288A-0F07-4079-8E78-28003691B165}</Project>
+      <Name>virtualMotion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\visionInterface\visionInterface\visionInterface.vcxproj">
+      <Project>{3C5DCE3C-A448-4BF7-BE10-9D0562E0081E}</Project>
+      <Name>visionInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ChooseColor_16x16.png" />
+    <Resource Include="Images\ColorPalette.png" />
+    <Resource Include="Images\Copy_16x16.png" />
+    <Resource Include="Images\Cut_16x16.png" />
+    <Resource Include="Images\Font_16x16.png" />
+    <Resource Include="Images\Forecolor_16x16.png" />
+    <Resource Include="Images\FormatPainter_16x16.png" />
+    <Resource Include="Images\Help_16x16.png" />
+    <Resource Include="Images\ParagraphSpacing_16x16.png" />
+    <Resource Include="Images\Paragraph_32x32.png" />
+    <Resource Include="Images\Paste_16x16.png" />
+    <Resource Include="Images\Paste_32x32.png" />
+    <Resource Include="Images\StylesGroup.png" />
+    <Resource Include="Images\Styles_32x32.png" />
+    <Resource Include="Images\ThemeFonts.png" />
+    <Resource Include="Images\32_32_black_RGB_24.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Imaging.png" />
+    <Resource Include="Images\Imaging_32x32.png" />
+    <Resource Include="Images\Help.png" />
+    <Content Include="Script\missionCode.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Script\missionLib.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Script\winApi.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Cv_template\16_16_black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Cv_template\32_32_black_RGB_24.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Cv_template\160_160_black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="183_183_black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="195_195_black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="69_69_black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Script\AccuracyMeasurement.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Script\debugLib.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Script\msVisionLib.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Script\visionLib.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\errInfo.png" />
+    <None Include="Cv_template\64_64_black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Script\ctrlLib.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Script\ioData.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Script\ioLib.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Script\servoLib.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Script\traceLib.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\MinusLarge.png" />
+    <Resource Include="Images\PlusLarge.png" />
+    <Content Include="Script\iomap.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Script\moveLib.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\close1.png" />
+    <Resource Include="Images\openHS.png" />
+    <Resource Include="Images\OpenFile.png" />
+    <Resource Include="Images\Page.png" />
+    <Resource Include="Images\DeleteHS.png" />
+    <Content Include="Script\IronPythonConsole.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 および x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows インストーラー 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Command\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\OpenCvSharp-AnyCPU.2.4.10.20150604\build\OpenCvSharp-AnyCPU.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\OpenCvSharp-AnyCPU.2.4.10.20150604\build\OpenCvSharp-AnyCPU.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

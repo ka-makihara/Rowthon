@@ -1,0 +1,35 @@
+﻿<Window x:Class="RowThon.VersionInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+		xmlns:local="clr-namespace:RowThon"
+        Title="VersionInfo" Height="354" Width="511">
+	<Window.Resources>
+		<local:VersionData x:Key="versionInfo" />
+		<CollectionViewSource x:Key="versionView" Source="{Binding Source={StaticResource versionInfo}, Path=FileList}" >
+			<CollectionViewSource.SortDescriptions>
+				<scm:SortDescription PropertyName="Name"/>
+				<scm:SortDescription PropertyName="Version" />
+				<scm:SortDescription PropertyName="BuildNo" />
+			</CollectionViewSource.SortDescriptions>
+		</CollectionViewSource>
+	</Window.Resources>
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="274*" />
+			<RowDefinition Height="41*" />
+		</Grid.RowDefinitions>
+		<StackPanel Grid.Row="1" Name="stackPanel1" Orientation="Horizontal" FlowDirection="RightToLeft">
+			<Button Content="OK" Height="23" Name="button1" Width="75" FontWeight="Bold" Click="button1_Click" />
+		</StackPanel>
+		<ListView Name="versionInfoView" ItemsSource="{Binding Source={StaticResource versionView}}">
+			<ListView.View>
+				<GridView>
+					<GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="ﾌｧｲﾙ" />
+					<GridViewColumn DisplayMemberBinding="{Binding Path=Version}" Header="ﾊﾞｰｼﾞｮﾝ"/>
+					<GridViewColumn DisplayMemberBinding="{Binding Path=BuildNo}" Header="ﾋﾞﾙﾄﾞ番号"/>
+				</GridView>
+			</ListView.View>
+		</ListView>
+	</Grid>
+</Window>
